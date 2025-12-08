@@ -25,7 +25,6 @@
         font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
           "Segoe UI", sans-serif;
       }
-      /* Custom Scrollbar */
       ::-webkit-scrollbar {
         width: 8px;
       }
@@ -40,8 +39,6 @@
       ::-webkit-scrollbar-thumb:hover {
         background: #475569;
       }
-
-      /* Reveal on Scroll Animation (Premium "Heavy" Feel) */
       .reveal-section {
         opacity: 0;
         transform: translateY(20px); /* Slightly less distance for cleaner feel */
@@ -54,7 +51,7 @@
       }
 
       .nav-link {
-        color: #e5e7eb; /* slate-200/300 */
+        color: #e5e7eb; 
         border-radius: 9999px;
         padding: 0.5rem 1.25rem;
         transition:
@@ -65,46 +62,43 @@
       }
 
       .nav-link:hover {
-        color: #f9fafb; /* slate-50 */
-        background-color: rgba(15, 23, 42, 0.95); /* deep navy pill */
-        box-shadow: 0 0 0 1px rgba(129, 140, 248, 0.6); /* subtle indigo ring */
+        color: #f9fafb; 
+        background-color: rgba(15, 23, 42, 0.95); 
+        box-shadow: 0 0 0 1px rgba(129, 140, 248, 0.6);
         transform: translateY(-1px);
       }
-      /* Consistent responsive spacing (Professional Density) */
       .section-spacing {
-        padding-top: 3rem;    /* 48px - Mobile */
+        padding-top: 3rem;    
         padding-bottom: 3rem;
       }
       .nav-link.cv-link:hover {
         background-color: #ffffff;
-        color: #dc2626; /* tailwind red-600 */
+        color: #dc2626; 
         box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
         transform: translateY(-2px);
       }
 
       @media (min-width: 640px) {
         .section-spacing {
-          padding-top: 3.5rem; /* 56px - Tablet */
+          padding-top: 3.5rem; 
           padding-bottom: 3.5rem;
         }
       }
       @media (min-width: 1024px) {
         .section-spacing {
-          padding-top: 4.5rem; /* desktop */
+          padding-top: 4.5rem; 
           padding-bottom: 4.5rem;
         }
       }
     </style>
   </head>
     <body class="min-h-screen bg-slate-950 text-slate-50">
-      <!-- Header -->
       <header
         class="sticky top-0 z-40 border-b border-slate-800 bg-slate-950/80 backdrop-blur"
       >
         <div
           class="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 md:px-12"
         >
-          <!-- Logo -->
           <a
             href="#hero"
             class="group flex items-center gap-1 text-sm font-semibold tracking-[0.35em] text-slate-100 transition-opacity hover:opacity-90"
@@ -119,7 +113,6 @@
             </span>
           </a>
 
-          <!-- NAV + TOGGLE WRAPPER -->
           <div class="relative flex items-center gap-4">
             <nav
               id="nav-menu"
@@ -254,7 +247,6 @@
         id="hero"
         class="relative overflow-hidden pt-16 pb-12 sm:pt-20 sm:pb-16 lg:pt-24 lg:pb-20 bg-slate-950"
       >
-        <!-- Background Elements (Atmospheric Glow) -->
         <div
           class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-indigo-500/10 blur-[120px] rounded-full pointer-events-none -z-10"
         ></div>
@@ -267,7 +259,6 @@
         >
           <!-- Left Column: Content -->
           <div class="space-y-8 relative z-10">
-            <!-- Kicker / Status -->
             <div
               class="inline-flex items-center gap-2 rounded-full border border-sky-500/20 bg-sky-500/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-sky-300 shadow-sm backdrop-blur-sm self-start"
             >
@@ -282,7 +273,6 @@
               Computer Science Undergraduate @ UoJ
             </div>
 
-            <!-- Headline -->
             <div>
               <h1
                 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl leading-tight"
@@ -307,7 +297,6 @@
 
             <!-- Buttons -->
             <div class="flex flex-wrap gap-4">
-              <!-- Download CV (Red Hover) -->
               <a
                 href="assets/Amjad_Hussain_CV.pdf"
                 download
@@ -1830,11 +1819,9 @@
               representing student communities.
             </p>
           </div>
-
-          <!-- Unique 12-column grid for perfect "Leadership" alignment -->
           <div class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-12">
             
-            <!-- IEEE SB UOJ (Featured: 8 cols) -->
+            <!-- IEEE SB UOJ  -->
             <div
               class="col-span-1 md:col-span-2 lg:col-span-8 group relative rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition-all duration-300 hover:border-indigo-500/30 hover:shadow-xl hover:shadow-indigo-500/10"
             >
@@ -1947,7 +1934,7 @@
               </div>
             </div>
 
-            <!-- YarlInsight (4 cols) -->
+            <!-- YarlInsight  -->
             <div
               class="md:col-span-1 lg:col-span-4 group relative rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition-all duration-300 hover:border-sky-500/30 hover:shadow-xl hover:shadow-sky-500/10 flex flex-col justify-between"
             >
@@ -1992,7 +1979,7 @@
               </div>
             </div>
 
-            <!-- IEEE YP (3 cols) -->
+            <!-- IEEE YP  -->
             <div
               class="md:col-span-1 lg:col-span-3 group relative rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition-all duration-300 hover:border-emerald-500/30 hover:shadow-xl hover:shadow-emerald-500/10"
             >
@@ -2036,7 +2023,7 @@
               </div>
             </div>
 
-            <!-- Batch Rep (3 cols) -->
+            <!-- Batch Rep -->
             <div
               class="md:col-span-1 lg:col-span-3 group relative rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition-all duration-300 hover:border-teal-500/30 hover:shadow-xl hover:shadow-teal-500/10"
             >
@@ -2080,7 +2067,7 @@
               </div>
             </div>
 
-            <!-- Leo Club (3 cols) -->
+            <!-- Leo Club -->
             <div
               class="md:col-span-1 lg:col-span-3 group relative rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition-all duration-300 hover:border-orange-500/30 hover:shadow-xl hover:shadow-orange-500/10"
             >
@@ -2124,7 +2111,7 @@
               </div>
             </div>
 
-            <!-- Gavel Club (3 cols) -->
+            <!-- Gavel Club -->
             <div
               class="md:col-span-1 lg:col-span-3 group relative rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition-all duration-300 hover:border-fuchsia-500/30 hover:shadow-xl hover:shadow-fuchsia-500/10"
             >
@@ -2516,7 +2503,6 @@
     </footer>
 
     <script>
-      // Dynamic year
       document.getElementById("year").textContent = new Date().getFullYear();
 
       // Mobile nav elements
@@ -2546,7 +2532,7 @@
         }
       }
 
-      // Close Menu Function (Helper)
+      // Close Menu Function
       function closeMenu() {
        navMenu.classList.remove("visible", "opacity-100");
         navMenu.classList.add("invisible", "opacity-0");
@@ -2583,7 +2569,6 @@
         section.classList.add("reveal-section");
         observer.observe(section);
       });
-      // Ensure scroll is unlocked if we resize to desktop
       window.addEventListener("resize", () => {
         if (window.innerWidth >= 768) {
           document.body.classList.remove("overflow-hidden");
@@ -2595,3 +2580,4 @@
     </script>
   </body>
 </html>
+
