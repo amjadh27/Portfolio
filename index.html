@@ -1,0 +1,2597 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" style="scroll-padding-top: 4rem;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Amjad Hussain | CV & Portfolio</title>
+    <meta
+      name="description"
+      content="Responsive CV website of Amjad Hussain – Computer Science undergraduate at University of Jaffna, full‑stack developer, and active IEEE volunteer."
+    />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #334155;
+        border-radius: 10px;
+        border: 2px solid #020617;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #475569;
+      }
+
+      /* Reveal on Scroll Animation (Premium "Heavy" Feel) */
+      .reveal-section {
+        opacity: 0;
+        transform: translateY(20px); /* Slightly less distance for cleaner feel */
+        transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        will-change: opacity, transform;
+      }
+      .reveal-section.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .nav-link {
+        color: #e5e7eb; /* slate-200/300 */
+        border-radius: 9999px;
+        padding: 0.5rem 1.25rem;
+        transition:
+          background-color 0.2s ease,
+          color 0.2s ease,
+          box-shadow 0.2s ease,
+          transform 0.2s ease;
+      }
+
+      .nav-link:hover {
+        color: #f9fafb; /* slate-50 */
+        background-color: rgba(15, 23, 42, 0.95); /* deep navy pill */
+        box-shadow: 0 0 0 1px rgba(129, 140, 248, 0.6); /* subtle indigo ring */
+        transform: translateY(-1px);
+      }
+      /* Consistent responsive spacing (Professional Density) */
+      .section-spacing {
+        padding-top: 3rem;    /* 48px - Mobile */
+        padding-bottom: 3rem;
+      }
+      .nav-link.cv-link:hover {
+        background-color: #ffffff;
+        color: #dc2626; /* tailwind red-600 */
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+        transform: translateY(-2px);
+      }
+
+      @media (min-width: 640px) {
+        .section-spacing {
+          padding-top: 3.5rem; /* 56px - Tablet */
+          padding-bottom: 3.5rem;
+        }
+      }
+      @media (min-width: 1024px) {
+        .section-spacing {
+          padding-top: 4.5rem; /* desktop */
+          padding-bottom: 4.5rem;
+        }
+      }
+    </style>
+  </head>
+    <body class="min-h-screen bg-slate-950 text-slate-50">
+      <!-- Header -->
+      <header
+        class="sticky top-0 z-40 border-b border-slate-800 bg-slate-950/80 backdrop-blur"
+      >
+        <div
+          class="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 md:px-12"
+        >
+          <!-- Logo -->
+          <a
+            href="#hero"
+            class="group flex items-center gap-1 text-sm font-semibold tracking-[0.35em] text-slate-100 transition-opacity hover:opacity-90"
+          >
+            <span class="uppercase transition-colors group-hover:text-indigo-200">
+              AMJAD HUSSAIN
+            </span>
+            <span
+              class="text-orange-500 text-lg transition-transform duration-300 group-hover:-translate-y-1 group-hover:text-indigo-400"
+            >
+              .
+            </span>
+          </a>
+
+          <!-- NAV + TOGGLE WRAPPER -->
+          <div class="relative flex items-center gap-4">
+            <nav
+              id="nav-menu"
+              class="invisible opacity-0 fixed inset-0 z-40 flex h-screen w-screen flex-col items-center justify-center bg-slate-950/95 backdrop-blur-xl transition-all duration-300 ease-in-out md:visible md:opacity-100 md:static md:h-auto md:w-auto md:flex-row md:bg-transparent md:backdrop-blur-0"
+            >
+              <ul
+                class="flex flex-col items-center gap-8 text-2xl font-medium text-slate-300 md:flex-row md:gap-1 md:text-sm"
+              >
+                <li>
+                  <a
+                    href="#about"
+                    class="nav-link block rounded-full px-4 py-2 transition-all duration-300 hover:text-white md:hover:bg-slate-800"
+                    onclick="closeMenu()"
+                  >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#education"
+                    class="nav-link block rounded-full px-4 py-2 transition-all duration-300 hover:text-white md:hover:bg-slate-800"
+                    onclick="closeMenu()"
+                  >Education</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#skills"
+                    class="nav-link block rounded-full px-4 py-2 transition-all duration-300 hover:text-white md:hover:bg-slate-800"
+                    onclick="closeMenu()"
+                  >Skills</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#projects"
+                    class="nav-link block rounded-full px-4 py-2 transition-all duration-300 hover:text-white md:hover:bg-slate-800"
+                    onclick="closeMenu()"
+                  >Projects</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#volunteering"
+                    class="nav-link block rounded-full px-4 py-2 transition-all duration-300 hover:text-white md:hover:bg-slate-800"
+                    onclick="closeMenu()"
+                  >Volunteering</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    class="nav-link block rounded-full px-4 py-2 transition-all duration-300 hover:text-white md:hover:bg-slate-800"
+                    onclick="closeMenu()"
+                  >Contact</a
+                  >
+                </li>
+
+                <li class="mt-4 md:mt-0 md:ml-4">
+                  <a
+                    href="assets/Amjad_Hussain_CV.pdf"
+                    download
+                    class="nav-link cv-link inline-flex items-center gap-2 text-xl md:text-sm md:rounded-full md:bg-indigo-500 md:px-4 md:py-1.5 md:text-white md:shadow-md md:shadow-indigo-500/40 transition-all duration-300 hover:bg-white hover:text-red-600 hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] hover:-translate-y-0.5 active:scale-95"
+                    onclick="closeMenu()"
+                  >
+                    <span class="inline-flex">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        class="h-5 w-5 md:h-3.5 md:w-3.5"
+                      >
+                        <path
+                          d="M10.75 2.75a.75.75 0 0 0-1.5 0v8.614L6.295 8.235a.75.75 0 1 0-1.09 1.03l4.25 4.5a.75.75 0 0 0 1.09 0l4.25-4.5a.75.75 0 0 0-1.09-1.03l-2.955 3.129V2.75Z"
+                        />
+                        <path
+                          d="M3.5 12.75a.75.75 0 0 0-1.5 0v2.5A2.75 2.75 0 0 0 4.75 18h10.5A2.75 2.75 0 0 0 18 15.25v-2.5a.75.75 0 0 0-1.5 0v2.5c0 .69-.56 1.25-1.25 1.25H4.75c-.69 0-1.25-.56-1.25-1.25v-2.5Z"
+                        />
+                      </svg>
+                    </span>
+                    <span>Download CV</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+            <button
+              id="nav-toggle"
+              class="relative z-50 inline-flex items-center justify-center rounded-full border border-slate-700/70 bg-slate-900/80 p-2 text-slate-100 transition-transform active:scale-90 md:hidden"
+              aria-label="Toggle navigation"
+              aria-expanded="false"
+              aria-controls="nav-menu"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                id="icon-open"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+              <svg
+                id="icon-close"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="hidden h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </header>
+
+    <main class="bg-slate-950">
+      <!-- HERO -->
+      <section
+        id="hero"
+        class="relative overflow-hidden pt-16 pb-12 sm:pt-20 sm:pb-16 lg:pt-24 lg:pb-20 bg-slate-950"
+      >
+        <!-- Background Elements (Atmospheric Glow) -->
+        <div
+          class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-indigo-500/10 blur-[120px] rounded-full pointer-events-none -z-10"
+        ></div>
+        <div
+          class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-fuchsia-500/5 blur-[100px] rounded-full pointer-events-none -z-10"
+        ></div>
+
+        <div
+          class="mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-2 lg:gap-20 md:px-12"
+        >
+          <!-- Left Column: Content -->
+          <div class="space-y-8 relative z-10">
+            <!-- Kicker / Status -->
+            <div
+              class="inline-flex items-center gap-2 rounded-full border border-sky-500/20 bg-sky-500/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-sky-300 shadow-sm backdrop-blur-sm self-start"
+            >
+              <span class="relative flex h-2 w-2">
+                <span
+                  class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"
+                ></span>
+                <span
+                  class="relative inline-flex rounded-full h-2 w-2 bg-sky-500"
+                ></span>
+              </span>
+              Computer Science Undergraduate @ UoJ
+            </div>
+
+            <!-- Headline -->
+            <div>
+              <h1
+                class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl leading-tight"
+              >
+                Hi, I'm <br class="hidden lg:block" />
+                <span
+                  class="inline-block bg-gradient-to-r from-fuchsia-400 via-indigo-400 to-emerald-400 bg-clip-text text-transparent pb-2"
+                  >Amjad Hussain</span
+                >
+              </h1>
+              <p
+                class="mt-6 text-lg leading-relaxed text-slate-400 max-w-xl"
+              >
+                A passionate Full‑Stack Developer focused on
+                <span class="text-sky-300 font-medium">Cybersecurity</span>,
+                <span class="text-indigo-300 font-medium">AI</span>, and
+                <span class="text-emerald-300 font-medium">DevOps</span>. I
+                seek to build reliable, high‑performance systems and solve
+                real‑world engineering challenges.
+              </p>
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex flex-wrap gap-4">
+              <!-- Download CV (Red Hover) -->
+              <a
+                href="assets/Amjad_Hussain_CV.pdf"
+                download
+                class="group inline-flex items-center justify-center gap-2 rounded-full bg-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-red-600 hover:shadow-indigo-500/50 ring-1 ring-white/10 hover:ring-indigo-500/50"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="h-4 w-4 transition-transform group-hover:scale-110"
+                >
+                  <path
+                    d="M10.75 2.75a.75.75 0 0 0-1.5 0v8.614L6.295 8.235a.75.75 0 1 0-1.09 1.03l4.25 4.5a.75.75 0 0 0 1.09 0l4.25-4.5a.75.75 0 0 0-1.09-1.03l-2.955 3.129V2.75Z"
+                  />
+                  <path
+                    d="M3.5 12.75a.75.75 0 0 0-1.5 0v2.5A2.75 2.75 0 0 0 4.75 18h10.5A2.75 2.75 0 0 0 18 15.25v-2.5a.75.75 0 0 0-1.5 0v2.5c0 .69-.56 1.25-1.25 1.25H4.75c-.69 0-1.25-.56-1.25-1.25v-2.5Z"
+                  />
+                </svg>
+                <span>Download CV</span>
+              </a>
+
+              <!-- View Projects -->
+              <a
+                href="#projects"
+                class="group inline-flex items-center justify-center gap-2 rounded-full border border-slate-700 bg-slate-800/50 px-6 py-3 text-sm font-semibold text-slate-200 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-slate-800 hover:text-indigo-400 hover:border-indigo-500/50 hover:shadow-lg hover:shadow-indigo-500/20"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="h-4 w-4 transition-transform group-hover:translate-x-1"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M2.5 3A1.5 1.5 0 0 0 1 4.5v2.793a.75.75 0 0 0 .22.53l.28.28a.75.75 0 0 0 .531.219h15.938a.75.75 0 0 0 .53-.22l.28-.28a.75.75 0 0 0 .22-.53V4.5A1.5 1.5 0 0 0 17.5 3h-15Zm0 6.5a1.5 1.5 0 0 0-1.5 1.5v2.793a.75.75 0 0 0 .22.53l.28.28a.75.75 0 0 0 .53.22h15.939a.75.75 0 0 0 .53-.22l.28-.28a.75.75 0 0 0 .22-.53V11a1.5 1.5 0 0 0-1.5-1.5h-15Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>View Projects</span>
+              </a>
+
+              <!-- Contact -->
+              <a
+                href="#contact"
+                class="group inline-flex items-center justify-center gap-2 rounded-full border border-slate-700 bg-slate-800/50 px-6 py-3 text-sm font-semibold text-slate-200 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-slate-800 hover:text-emerald-400 hover:border-emerald-500/50 hover:shadow-lg hover:shadow-emerald-500/20"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="h-4 w-4"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.404 14.596A6.5 6.5 0 1 1 16.5 10a1.25 1.25 0 0 1-2.5 0 4 4 0 1 0-.571 2.06A2.75 2.75 0 0 0 18 10a8 8 0 1 0-2.343 5.657.75.75 0 0 0-1.06-1.06 6.5 6.5 0 0 1-9.193 0ZM10 7.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>Contact</span>
+              </a>
+            </div>
+
+            <!-- Social / Contact Links (Grouped) -->
+            <div
+              class="pt-8 border-t border-slate-800/50 flex flex-wrap gap-x-6 gap-y-3 text-xs sm:text-sm text-slate-400"
+            >
+              <!-- Location -->
+              <div
+                class="flex items-center gap-2 hover:text-slate-200 transition-colors cursor-default"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-4 w-4 text-indigo-400"
+                >
+                  <path
+                    d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"
+                  />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                <span>Colombo, Sri Lanka</span>
+              </div>
+
+              <!-- Email -->
+              <a
+                href="mailto:zh.amjadhussain@gmail.com"
+                class="flex items-center gap-2 hover:text-sky-300 transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-4 w-4 text-sky-400"
+                >
+                  <rect width="20" height="16" x="2" y="4" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+                <span>zh.amjadhussain@gmail.com</span>
+              </a>
+
+              <!-- GitHub -->
+              <a
+                href="https://github.com/amjadh27"
+                target="_blank"
+                rel="noopener"
+                class="flex items-center gap-2 hover:text-white transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="h-4 w-4 text-slate-300"
+                >
+                  <path
+                    d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.56-1.11-1.56-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 2.5-.34c.85.01 1.7.13 2.5.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"
+                  />
+                </svg>
+                <span class="hidden sm:inline">GitHub</span>
+              </a>
+
+              <!-- LinkedIn -->
+              <a
+                href="https://linkedin.com/in/amjadhussain2k"
+                target="_blank"
+                rel="noopener"
+                class="flex items-center gap-2 hover:text-blue-300 transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="h-4 w-4 text-blue-400"
+                >
+                  <path
+                    d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2ZM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 1 1 8.3 6.5a1.78 1.78 0 0 1-1.8 1.75ZM19 19h-3v-4.74c0-1.13-.04-2.58-1.57-2.58-1.57 0-1.81 1.23-1.81 2.5V19h-3v-9h2.9v1.23h.04a3.17 3.17 0 0 1 2.85-1.56c3.05 0 3.6 2.01 3.6 4.62Z"
+                  />
+                </svg>
+                <span class="hidden sm:inline">LinkedIn</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Photo -->
+          <div class="relative flex justify-center md:justify-end z-10 w-full">
+            <!-- Glow behind photo -->
+            <div
+              class="absolute inset-0 bg-gradient-to-tr from-indigo-500/20 to-fuchsia-500/20 blur-3xl rounded-full -z-10 transform scale-110"
+            ></div>
+
+            <!-- Photo Container -->
+            <div class="relative group">
+              <!-- Pulse ring -->
+              <div
+                class="absolute -inset-4 rounded-full bg-gradient-to-r from-indigo-500 to-fuchsia-500 opacity-20 blur-xl group-hover:opacity-40 transition duration-1000 group-hover:duration-200"
+              ></div>
+
+              <div
+                class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-[2rem] border-2 border-slate-700/50 bg-slate-800/50 overflow-hidden shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-indigo-500/30"
+              >
+                <img
+                  src="assets/profile.jpg"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  alt="Amjad Hussain"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section
+        id="about"
+        class="relative overflow-hidden bg-slate-950 section-spacing"
+      >
+        <!-- Background glow -->
+        <div
+          class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-500/10 blur-[100px] rounded-full pointer-events-none"
+        ></div>
+
+        <div class="relative mx-auto max-w-7xl px-6 md:px-12">
+          <!-- Section Header -->
+          <div class="text-center mb-8 sm:mb-10 lg:mb-12">
+            <h2
+              class="text-3xl font-bold tracking-tight text-white sm:text-4xl"
+            >
+              About Me
+            </h2>
+            <div
+              class="mt-4 mx-auto max-w-3xl text-slate-400 leading-relaxed text-base sm:text-lg"
+            >
+              <p>
+                Computer Science (Honours) undergraduate at the
+                <span class="font-semibold text-indigo-400"
+                  >University of Jaffna (2022–Present)</span
+                >. I combine academic rigor with a passion for
+                <span class="text-slate-200"
+                  >internships and research-driven engineering</span
+                >. My goal is to translate complex requirements into robust,
+                scalable systems while fostering collaboration within the tech
+                community.
+              </p>
+            </div>
+          </div>
+
+          <!-- Cards Grid -->
+          <div class="grid gap-6 md:grid-cols-3">
+            <!-- Card 1 -->
+            <div
+              class="group relative rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-indigo-500/30 hover:shadow-2xl hover:shadow-indigo-500/10"
+            >
+              <div
+                class="absolute inset-0 rounded-2xl bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              ></div>
+
+              <div class="relative z-10">
+                <div
+                  class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-slate-800 text-indigo-400 ring-1 ring-slate-700 transition-colors duration-300 group-hover:bg-indigo-500 group-hover:text-white group-hover:ring-indigo-500"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 2.25 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z"
+                    />
+                  </svg>
+                </div>
+
+                <h3
+                  class="mb-3 text-lg font-semibold text-slate-100 group-hover:text-indigo-300 transition-colors"
+                >
+                  Internship &amp; R&amp;D Focus
+                </h3>
+                <p
+                  class="text-sm leading-relaxed text-slate-400 group-hover:text-slate-300"
+                >
+                  Seeking opportunities in
+                  <span class="text-indigo-200/80 font-medium"
+                    >Software Engineering, Cybersecurity, and AI/ML</span
+                  >. I am eager to contribute to production-grade products,
+                  adopt industry best practices, and collaborate with
+                  experienced engineering teams.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="group relative rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-sky-500/30 hover:shadow-2xl hover:shadow-sky-500/10"
+            >
+              <div
+                class="absolute inset-0 rounded-2xl bg-gradient-to-br from-sky-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              ></div>
+
+              <div class="relative z-10">
+                <div
+                  class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-slate-800 text-sky-400 ring-1 ring-slate-700 transition-colors duration-300 group-hover:bg-sky-500 group-hover:text-white group-hover:ring-sky-500"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 18"
+                    />
+                  </svg>
+                </div>
+
+                <h3
+                  class="mb-3 text-lg font-semibold text-slate-100 group-hover:text-sky-300 transition-colors"
+                >
+                  Technical Interests
+                </h3>
+                <p
+                  class="text-sm leading-relaxed text-slate-400 group-hover:text-slate-300"
+                >
+                  Full‑stack web &amp; mobile development, networking, and
+                  DevOps automation. Comfortable across
+                  <span class="text-sky-200/80 font-medium"
+                    >frontend UIs, backend architectures, databases and secure
+                    APIs</span
+                  >.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="group relative rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/30 hover:shadow-2xl hover:shadow-emerald-500/10"
+            >
+              <div
+                class="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              ></div>
+
+              <div class="relative z-10">
+                <div
+                  class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-slate-800 text-emerald-400 ring-1 ring-slate-700 transition-colors duration-300 group-hover:bg-emerald-500 group-hover:text-white group-hover:ring-emerald-500"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"
+                    />
+                  </svg>
+                </div>
+
+                <h3
+                  class="mb-3 text-lg font-semibold text-slate-100 group-hover:text-emerald-300 transition-colors"
+                >
+                  Community &amp; Leadership
+                </h3>
+                <p
+                  class="text-sm leading-relaxed text-slate-400 group-hover:text-slate-300"
+                >
+                  <span class="text-emerald-200/80 font-medium">Treasurer</span>
+                  at IEEE SB UOJ, former Financial Chair (YarlInsight '24), and
+                  University Rep for IEEE YP Sri Lanka (StudPro 6.0). Strong
+                  focus on mentoring and empowering peers through community
+                  work.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section
+        id="education"
+        class="relative overflow-hidden bg-slate-950 section-spacing"
+      >
+        <!-- Background -->
+        <div
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sky-500/5 blur-[100px] rounded-full pointer-events-none"
+        ></div>
+
+        <div class="relative mx-auto max-w-7xl px-6 md:px-12">
+          <div class="text-center mb-8 sm:mb-10 lg:mb-12">
+            <h2
+              class="text-3xl font-bold tracking-tight text-white sm:text-4xl"
+            >
+              Education
+            </h2>
+            <div class="mt-2 h-1 w-20 bg-indigo-500 rounded-full mx-auto"></div>
+          </div>
+
+          <div class="grid gap-8 md:grid-cols-2">
+            <!-- UoJ -->
+            <div
+              class="group relative rounded-2xl border border-slate-800 bg-slate-900/50 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-indigo-500/30 hover:shadow-2xl hover:shadow-indigo-500/10"
+            >
+              <div
+                class="absolute inset-0 rounded-2xl bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              ></div>
+
+              <div class="relative z-10 flex flex-col h-full">
+                <div class="flex items-center justify-between mb-6">
+                  <div
+                    class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-slate-800 text-indigo-400 ring-1 ring-slate-700 transition-colors duration-300 group-hover:bg-indigo-500 group-hover:text-white group-hover:ring-indigo-500"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-6 w-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4.26 10.147a60.436 60.436 0 0 0-.491 6.347A48.627 48.627 0 0 1 12 20.904a48.627 48.627 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.57 50.57 0 0 0-2.658-.813A59.905 59.905 0 0 1 12 3.493a59.902 59.902 0 0 1 10.499 5.24 51.558 51.558 0 0 1-4.29 1.742m-15.481 0c3.399 1.096 7.222 1.967 11.06 2.353 3.84.386 7.824.084 11.606-.757m-5.914 10.372a27.17 27.17 0 0 1-5.69-2.585m0 0c1.77 2.16 4.908 3.06 7.915 2.19m-4.502-3.14a48.553 48.553 0 0 0-5.11-1.058"
+                      />
+                    </svg>
+                  </div>
+                  <span
+                    class="inline-flex items-center rounded-full border border-indigo-500/20 bg-indigo-500/10 px-3 py-1 text-xs font-semibold text-indigo-300"
+                  >
+                    2022 – Present
+                  </span>
+                </div>
+
+                <h3
+                  class="text-xl font-bold text-white group-hover:text-indigo-300 transition-colors"
+                >
+                  University of Jaffna
+                </h3>
+                <p class="text-sm font-medium text-indigo-400 mt-1">
+                  BSc (Honours) in Computer Science
+                </p>
+
+                <div class="mt-6 space-y-3">
+                  <div class="flex gap-3">
+                    <span
+                      class="mt-1.5 h-1.5 w-1.5 rounded-full bg-indigo-500 flex-shrink-0"
+                    ></span>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                      Computer Science undergraduate &amp;
+                      <span class="text-slate-300 font-medium"
+                        >Batch Representative</span
+                      >
+                      (Level 2S).
+                    </p>
+                  </div>
+                  <div class="flex gap-3">
+                    <span
+                      class="mt-1.5 h-1.5 w-1.5 rounded-full bg-indigo-500 flex-shrink-0"
+                    ></span>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                      <span class="text-slate-300 font-medium">Treasurer</span>
+                      &amp; Executive Committee Member –
+                      IEEE Student Branch UOJ.
+                    </p>
+                  </div>
+                  <div class="flex gap-3">
+                    <span
+                      class="mt-1.5 h-1.5 w-1.5 rounded-full bg-indigo-500 flex-shrink-0"
+                    ></span>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                      Past member of the
+                      <span class="text-slate-300 font-medium"
+                        >Gavel Club</span
+                      >.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Royal College -->
+            <div
+              class="group relative rounded-2xl border border-slate-800 bg-slate-900/50 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-sky-500/30 hover:shadow-2xl hover:shadow-sky-500/10"
+            >
+              <div
+                class="absolute inset-0 rounded-2xl bg-gradient-to-br from-sky-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              ></div>
+
+              <div class="relative z-10 flex flex-col h-full">
+                <div class="flex items-center justify-between mb-6">
+                  <div
+                    class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-slate-800 text-sky-400 ring-1 ring-slate-700 transition-colors duration-300 group-hover:bg-sky-500 group-hover:text-white group-hover:ring-sky-500"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-6 w-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z"
+                      />
+                    </svg>
+                  </div>
+                  <span
+                    class="inline-flex items-center rounded-full border border-sky-500/20 bg-sky-500/10 px-3 py-1 text-xs font-semibold text-sky-300"
+                  >
+                    2006 – 2018
+                  </span>
+                </div>
+
+                <h3
+                  class="text-xl font-bold text-white group-hover:text-sky-300 transition-colors"
+                >
+                  Royal College, Colombo
+                </h3>
+                <p class="text-sm font-medium text-sky-400 mt-1">
+                  Physical Science Stream
+                </p>
+
+                <div class="mt-6 space-y-3">
+                  <div class="flex gap-3">
+                    <span
+                      class="mt-1.5 h-1.5 w-1.5 rounded-full bg-sky-500 flex-shrink-0"
+                    ></span>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                      Completed secondary education with strong focus on
+                      <span class="text-slate-300 font-medium"
+                        >Mathematics &amp; Physics</span
+                      >.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section
+        id="skills"
+        class="relative overflow-hidden bg-slate-950 section-spacing"
+      >
+        <!-- Background -->
+        <div
+          class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-emerald-500/5 blur-[100px] rounded-full pointer-events-none"
+        ></div>
+
+        <div class="relative mx-auto max-w-7xl px-6 md:px-12">
+          <div class="text-center mb-8 sm:mb-10 lg:mb-12">
+            <h2
+              class="text-3xl font-bold tracking-tight text-white sm:text-4xl"
+            >
+              Technical Skills
+            </h2>
+            <p
+              class="mt-4 text-slate-400 max-w-2xl mx-auto text-lg"
+            >
+              A balanced blend of
+              <span class="text-indigo-400 font-medium"
+                >Full‑Stack Development</span
+              >, data tools, and solid soft skills.
+            </p>
+          </div>
+
+          <div
+            class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+          >
+            <!-- Frontend -->
+            <div
+              class="group relative rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-indigo-500/30 hover:shadow-xl hover:shadow-indigo-500/10"
+            >
+              <div
+                class="absolute inset-0 rounded-2xl bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              ></div>
+
+              <div class="relative z-10">
+                <div
+                  class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-slate-800 text-indigo-400 ring-1 ring-slate-700 group-hover:bg-indigo-500 group-hover:text-white group-hover:ring-indigo-500 transition-colors"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 18"
+                    />
+                  </svg>
+                </div>
+                <h3
+                  class="mb-3 text-lg font-semibold text-slate-100 group-hover:text-indigo-300 transition-colors"
+                >
+                  Frontend
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="rounded-md bg-slate-800 px-2.5 py-1 text-xs font-medium text-slate-300 border border-slate-700/50"
+                    >HTML5 / CSS3</span
+                  >
+                  <span
+                    class="rounded-md bg-slate-800 px-2.5 py-1 text-xs font-medium text-slate-300 border border-slate-700/50"
+                    >JavaScript (ES6+)</span
+                  >
+                  <span
+                    class="rounded-md bg-indigo-500/10 px-2.5 py-1 text-xs font-medium text-indigo-300 border border-indigo-500/20"
+                    >Tailwind CSS</span
+                  >
+                  <span
+                    class="rounded-md bg-indigo-500/10 px-2.5 py-1 text-xs font-medium text-indigo-300 border border-indigo-500/20"
+                    >React.js</span
+                  >
+                  <span
+                    class="rounded-md bg-slate-800 px-2.5 py-1 text-xs font-medium text-slate-300 border border-slate-700/50"
+                    >React Native</span
+                  >
+                  <span
+                    class="rounded-md bg-slate-800 px-2.5 py-1 text-xs font-medium text-slate-400 border border-slate-700/50"
+                    >Next.js / Angular</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Backend -->
+            <div
+              class="group relative rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-sky-500/30 hover:shadow-xl hover:shadow-sky-500/10"
+            >
+              <div
+                class="absolute inset-0 rounded-2xl bg-gradient-to-br from-sky-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              ></div>
+
+              <div class="relative z-10">
+                <div
+                  class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-slate-800 text-sky-400 ring-1 ring-slate-700 group-hover:bg-sky-500 group-hover:text-white group-hover:ring-sky-500 transition-colors"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5.25 14.25h13.5m-13.5 0a3 3 0 0 1-3-3m3 3a3 3 0 0 0-3 3m13.5-6H21a3 3 0 0 1 3 3m-3 3a3 3 0 0 0 3-3m-16.5 6h16.5m-16.5 0a3 3 0 0 1-3-3m19.5 0a3 3 0 0 0-3 3m-16.5 0h16.5m-16.5 0a3 3 0 0 0 3 3m13.5 0a3 3 0 0 1-3 3"
+                    />
+                  </svg>
+                </div>
+                <h3
+                  class="mb-3 text-lg font-semibold text-slate-100 group-hover:text-sky-300 transition-colors"
+                >
+                  Backend &amp; DB
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="rounded-md bg-slate-800 px-2.5 py-1 text-xs font-medium text-slate-300 border border-slate-700/50"
+                    >PHP / Laravel</span
+                  >
+                  <span
+                    class="rounded-md bg-sky-500/10 px-2.5 py-1 text-xs font-medium text-sky-300 border border-sky-500/20"
+                    >ASP.NET Core</span
+                  >
+                  <span
+                    class="rounded-md bg-sky-500/10 px-2.5 py-1 text-xs font-medium text-sky-300 border border-sky-500/20"
+                    >SQL Server</span
+                  >
+                  <span
+                    class="rounded-md bg-slate-800 px-2.5 py-1 text-xs font-medium text-slate-300 border border-slate-700/50"
+                    >MySQL / MariaDB</span
+                  >
+                  <span
+                    class="rounded-md bg-slate-800 px-2.5 py-1 text-xs font-medium text-slate-300 border border-slate-700/50"
+                    >MongoDB</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Programming Languages -->
+            <div
+              class="group relative rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/30 hover:shadow-xl hover:shadow-emerald-500/10"
+            >
+              <div
+                class="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              ></div>
+
+              <div class="relative z-10">
+                <div
+                  class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-slate-800 text-emerald-400 ring-1 ring-slate-700 group-hover:bg-emerald-500 group-hover:text-white group-hover:ring-emerald-500 transition-colors"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 0 1 6-.937c.713 0 1.416.056 2.107.163V6.75A2.25 2.25 0 0013.5 9h2.25a2.25 2.25 0 002.25-2.25v-1.12c.738.16 1.455.352 2.148.57"
+                    />
+                  </svg>
+                </div>
+                <h3
+                  class="mb-3 text-lg font-semibold text-slate-100 group-hover:text-emerald-300 transition-colors"
+                >
+                  Programming Languages
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="rounded-md bg-emerald-500/10 px-2.5 py-1 text-xs font-medium text-emerald-300 border border-emerald-500/20"
+                    >Java</span
+                  >
+                  <span
+                    class="rounded-md bg-emerald-500/10 px-2.5 py-1 text-xs font-medium text-emerald-300 border border-emerald-500/20"
+                    >Python</span
+                  >
+                  <span
+                    class="rounded-md bg-slate-800 px-2.5 py-1 text-xs font-medium text-slate-300 border border-slate-700/50"
+                    >C++</span
+                  >
+                  <span
+                    class="rounded-md bg-slate-800 px-2.5 py-1 text-xs font-medium text-slate-300 border border-slate-700/50"
+                    >Perl</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Data Tools -->
+            <div
+              class="group relative rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-fuchsia-500/30 hover:shadow-xl hover:shadow-fuchsia-500/10"
+            >
+              <div
+                class="absolute inset-0 rounded-2xl bg-gradient-to-br from-fuchsia-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              ></div>
+
+              <div class="relative z-10">
+                <div
+                  class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-slate-800 text-fuchsia-400 ring-1 ring-slate-700 group-hover:bg-fuchsia-500 group-hover:text-white group-hover:ring-fuchsia-500 transition-colors"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605"
+                    />
+                  </svg>
+                </div>
+                <h3
+                  class="mb-3 text-lg font-semibold text-slate-100 group-hover:text-fuchsia-300 transition-colors"
+                >
+                  Data Tools
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="rounded-md bg-fuchsia-500/10 px-2.5 py-1 text-xs font-medium text-fuchsia-300 border border-fuchsia-500/20"
+                    >Pandas</span
+                  >
+                  <span
+                    class="rounded-md bg-fuchsia-500/10 px-2.5 py-1 text-xs font-medium text-fuchsia-300 border border-fuchsia-500/20"
+                    >NumPy</span
+                  >
+                  <span
+                    class="rounded-md bg-slate-800 px-2.5 py-1 text-xs font-medium text-slate-300 border border-slate-700/50"
+                    >JupyterLab</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Tools & DevOps -->
+            <div
+              class="group relative rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:shadow-xl hover:shadow-orange-500/10"
+            >
+              <div
+                class="absolute inset-0 rounded-2xl bg-gradient-to-br from-orange-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              ></div>
+
+              <div class="relative z-10">
+                <div
+                  class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-slate-800 text-orange-400 ring-1 ring-slate-700 group-hover:bg-orange-500 group-hover:text-white group-hover:ring-orange-500 transition-colors"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"
+                    />
+                  </svg>
+                </div>
+                <h3
+                  class="mb-3 text-lg font-semibold text-slate-100 group-hover:text-orange-300 transition-colors"
+                >
+                  Tools &amp; DevOps
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="rounded-md bg-orange-500/10 px-2.5 py-1 text-xs font-medium text-orange-300 border border-orange-500/20"
+                    >Git &amp; GitHub</span
+                  >
+                  <span
+                    class="rounded-md bg-slate-800 px-2.5 py-1 text-xs font-medium text-slate-300 border border-slate-700/50"
+                    >Swagger / OpenAPI</span
+                  >
+                  <span
+                    class="rounded-md bg-slate-800 px-2.5 py-1 text-xs font-medium text-slate-300 border border-slate-700/50"
+                    >Postman</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Soft Skills -->
+            <div
+              class="group relative rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-teal-500/30 hover:shadow-xl hover:shadow-teal-500/10"
+            >
+              <div
+                class="absolute inset-0 rounded-2xl bg-gradient-to-br from-teal-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              ></div>
+
+              <div class="relative z-10">
+                <div
+                  class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-slate-800 text-teal-400 ring-1 ring-slate-700 group-hover:bg-teal-500 group-hover:text-white group-hover:ring-teal-500 transition-colors"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"
+                    />
+                  </svg>
+                </div>
+                <h3
+                  class="mb-3 text-lg font-semibold text-slate-100 group-hover:text-teal-300 transition-colors"
+                >
+                  Soft Skills
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="rounded-md bg-teal-500/10 px-2.5 py-1 text-xs font-medium text-teal-300 border border-teal-500/20"
+                    >Leadership</span
+                  >
+                  <span
+                    class="rounded-md bg-teal-500/10 px-2.5 py-1 text-xs font-medium text-teal-300 border border-teal-500/20"
+                    >Communication</span
+                  >
+                  <span
+                    class="rounded-md bg-slate-800 px-2.5 py-1 text-xs font-medium text-slate-300 border border-slate-700/50"
+                    >Problem Solving</span
+                  >
+                  <span
+                    class="rounded-md bg-slate-800 px-2.5 py-1 text-xs font-medium text-slate-300 border border-slate-700/50"
+                    >MS Office (Word, Excel, PowerPoint)</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Spoken Languages -->
+            <div
+              class="group relative rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-pink-500/30 hover:shadow-xl hover:shadow-pink-500/10"
+            >
+              <div
+                class="absolute inset-0 rounded-2xl bg-gradient-to-br from-pink-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              ></div>
+
+              <div class="relative z-10">
+                <div
+                  class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-slate-800 text-pink-400 ring-1 ring-slate-700 group-hover:bg-pink-500 group-hover:text-white group-hover:ring-pink-500 transition-colors"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"
+                    />
+                  </svg>
+                </div>
+                <h3
+                  class="mb-3 text-lg font-semibold text-slate-100 group-hover:text-pink-300 transition-colors"
+                >
+                  Languages
+                </h3>
+                <div class="space-y-2">
+                  <div
+                    class="flex items-center justify-between text-xs"
+                  >
+                    <span class="text-slate-300">English</span>
+                    <span class="font-medium text-pink-300">Professional</span>
+                  </div>
+                  <div class="h-1.5 w-full rounded-full bg-slate-800">
+                    <div
+                      class="h-full w-[90%] rounded-full bg-gradient-to-r from-pink-500 to-rose-500"
+                    ></div>
+                  </div>
+
+                  <div
+                    class="flex items-center justify-between text-xs pt-1"
+                  >
+                    <span class="text-slate-300">Tamil</span>
+                    <span class="font-medium text-pink-300">Native</span>
+                  </div>
+                  <div class="h-1.5 w-full rounded-full bg-slate-800">
+                    <div
+                      class="h-full w-[100%] rounded-full bg-gradient-to-r from-pink-500 to-rose-500"
+                    ></div>
+                  </div>
+
+                  <div
+                    class="flex items-center justify-between text-xs pt-1"
+                  >
+                    <span class="text-slate-300">Sinhala</span>
+                    <span class="font-medium text-pink-300"
+                      >Conversational</span
+                    >
+                  </div>
+                  <div class="h-1.5 w-full rounded-full bg-slate-800">
+                    <div
+                      class="h-full w-[60%] rounded-full bg-gradient-to-r from-pink-500 to-rose-500"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Interests -->
+            <div
+              class="group relative rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-yellow-500/30 hover:shadow-xl hover:shadow-yellow-500/10"
+            >
+              <div
+                class="absolute inset-0 rounded-2xl bg-gradient-to-br from-yellow-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              ></div>
+
+              <div class="relative z-10">
+                <div
+                  class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-slate-800 text-yellow-400 ring-1 ring-slate-700 group-hover:bg-yellow-500 group-hover:text-white group-hover:ring-yellow-500 transition-colors"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 5.975 5.975 0 0 1-2.133-1.001A3.75 3.75 0 0 0 12 18Z"
+                    />
+                  </svg>
+                </div>
+                <h3
+                  class="mb-3 text-lg font-semibold text-slate-100 group-hover:text-yellow-300 transition-colors"
+                >
+                  Interests
+                </h3>
+                <div class="flex flex-col gap-2 text-xs text-slate-300">
+                  <div class="flex items-center gap-2">
+                    <span
+                      class="h-1.5 w-1.5 rounded-full bg-yellow-500"
+                    ></span>
+                    <span>Cybersecurity &amp; Networking</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span
+                      class="h-1.5 w-1.5 rounded-full bg-yellow-500"
+                    ></span>
+                    <span>Coding Challenges &amp; Problem Solving</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span
+                      class="h-1.5 w-1.5 rounded-full bg-yellow-500"
+                    ></span>
+                    <span>Continuous Learning &amp; Tech Research</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section
+        id="projects"
+        class="relative overflow-hidden bg-slate-950 section-spacing"
+      >
+        <!-- Background -->
+        <div
+          class="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-500/5 blur-[100px] rounded-full pointer-events-none"
+        ></div>
+
+        <div class="relative mx-auto max-w-7xl px-6 md:px-12">
+          <div class="text-center mb-8 sm:mb-10 lg:mb-12">
+            <h2
+              class="text-3xl font-bold tracking-tight text-white sm:text-4xl"
+            >
+              Featured Projects
+            </h2>
+            <div class="mt-2 h-1 w-20 bg-indigo-500 rounded-full mx-auto"></div>
+            <p
+              class="mt-4 text-slate-400 max-w-2xl mx-auto text-lg"
+            >
+              Real-world applications built with a focus on
+              <span class="text-indigo-400 font-medium">scalability</span>,
+              <span class="text-indigo-400 font-medium">performance</span>, and
+              <span class="text-indigo-400 font-medium">user experience</span>.
+            </p>
+          </div>
+
+          <div class="grid gap-8 md:grid-cols-2">
+            <!-- AuctixLab -->
+            <div
+              class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 transition-all duration-300 hover:border-indigo-500/30 hover:shadow-2xl hover:shadow-indigo-500/10"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-b from-transparent to-slate-950/90 z-10 pointer-events-none"
+              ></div>
+
+              <!-- Image -->
+              <div class="relative h-64 overflow-hidden">
+                <div
+                  class="absolute inset-0 bg-indigo-500/10 mix-blend-overlay z-10"
+                ></div>
+                <img
+                  src="assets/auctixlab.jpeg"
+                  alt="AuctixLab league auction system demo"
+                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+
+              <!-- Content -->
+              <div class="relative z-20 p-6 -mt-12">
+                <div
+                  class="mb-4 inline-flex items-center gap-2 rounded-full border border-indigo-500/20 bg-slate-950/80 backdrop-blur-sm px-3 py-1 text-xs font-medium text-indigo-300 shadow-sm"
+                >
+                  <span class="relative flex h-2 w-2">
+                    <span
+                      class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"
+                    ></span>
+                    <span
+                      class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"
+                    ></span>
+                  </span>
+                  Production Deployment
+                </div>
+
+                <h3
+                  class="text-2xl font-bold text-white mb-2 group-hover:text-indigo-300 transition-colors"
+                >
+                  League Auction Management System
+                </h3>
+                <p class="text-sm font-medium text-slate-400 mb-4">
+                  Full‑Stack Developer · QA
+                </p>
+
+                <p class="text-slate-400 leading-relaxed text-sm mb-6">
+                  A web-based auction platform for sports leagues, handling
+                  real-time bidding, multiple user roles, and complete auction
+                  history. Deployed on VPS and used in live tournaments.
+                </p>
+
+                <!-- Tech Stack -->
+                <div class="flex flex-wrap gap-2 mb-6">
+                  <span
+                    class="rounded-md bg-slate-800/80 px-2.5 py-1 text-xs font-medium text-slate-300 border border-slate-700/50"
+                    >ASP.NET Core</span
+                  >
+                  <span
+                    class="rounded-md bg-slate-800/80 px-2.5 py-1 text-xs font-medium text-slate-300 border border-slate-700/50"
+                    >Angular</span
+                  >
+                  <span
+                    class="rounded-md bg-slate-800/80 px-2.5 py-1 text-xs font-medium text-slate-300 border border-slate-700/50"
+                    >SignalR</span
+                  >
+                  <span
+                    class="rounded-md bg-slate-800/80 px-2.5 py-1 text-xs font-medium text-slate-300 border border-slate-700/50"
+                    >SQL Server</span
+                  >
+                </div>
+
+                <!-- Actions -->
+                <div
+                  class="flex flex-wrap gap-3 pt-4 border-t border-slate-800/50"
+                >
+                  <a
+                    href="https://www.auctixlab.cloud/"
+                    target="_blank"
+                    rel="noopener"
+                    class="inline-flex items-center justify-center gap-2 rounded-full bg-indigo-600 px-4 py-2 text-xs font-semibold text-white shadow-lg shadow-indigo-500/20 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-indigo-600 hover:shadow-indigo-500/40"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-3.5 w-3.5"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="M2 12h20" />
+                      <path
+                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                      />
+                    </svg>
+                    <span>Live Site</span>
+                  </a>
+
+                  <a
+                    href="https://1drv.ms/p/c/5e260c29d40855f3/IQDBLCf5Q5bsSLJS5DfBDiD6AS0HNZoIG7b_f2zKbeFTTL8?e=odLsry"
+                    target="_blank"
+                    rel="noopener"
+                    class="inline-flex items-center justify-center gap-2 rounded-full border border-slate-700 bg-slate-800 px-4 py-2 text-xs font-medium text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-red-600 hover:border-transparent hover:shadow-lg hover:shadow-white/20"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-3.5 w-3.5"
+                    >
+                      <rect
+                        width="18"
+                        height="18"
+                        x="3"
+                        y="3"
+                        rx="2"
+                        ry="2"
+                      />
+                      <line x1="9" x2="15" y1="3" y2="21" />
+                    </svg>
+                    <span>Slides</span>
+                  </a>
+
+                  <a
+                    href="https://github.com/Mr-AbdullahFahim/AuctionSystem"
+                    target="_blank"
+                    rel="noopener"
+                    class="inline-flex items-center justify-center gap-2 rounded-full border border-slate-700 bg-slate-950 px-4 py-2 text-xs font-medium text-slate-400 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-slate-900 hover:border-transparent"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      class="h-4 w-4"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.833.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.95 0-1.093.39-1.988 1.03-2.688-.103-.253-.447-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.748-1.026 2.748-1.026.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.944.359.31.679.92.679 1.852 0 1.336-.012 2.415-.012 2.741 0 .268.18.58.688.481A10.019 10.019 0 0 0 22 12.017C22 6.484 17.523 2 12 2Z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span>Source</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Complaint Management System -->
+            <div
+              class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 transition-all duration-300 hover:border-sky-500/30 hover:shadow-2xl hover:shadow-sky-500/10"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-b from-transparent to-slate-950/90 z-10 pointer-events-none"
+              ></div>
+
+              <!-- Image -->
+              <div class="relative h-64 overflow-hidden">
+                <div
+                  class="absolute inset-0 bg-sky-500/10 mix-blend-overlay z-10"
+                ></div>
+                <img
+                  src="assets/complaints.png"
+                  alt="Complaint Management System demo"
+                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+
+              <!-- Content -->
+              <div class="relative z-20 p-6 -mt-12">
+                <div
+                  class="mb-4 inline-flex items-center gap-2 rounded-full border border-sky-500/20 bg-slate-950/80 backdrop-blur-sm px-3 py-1 text-xs font-medium text-sky-300 shadow-sm"
+                >
+                  Second-Year Project
+                </div>
+
+                <h3
+                  class="text-2xl font-bold text-white mb-2 group-hover:text-sky-300 transition-colors"
+                >
+                  Complaint Management System
+                </h3>
+                <p class="text-sm font-medium text-slate-400 mb-4">
+                  Department of Computer Science, UoJ
+                </p>
+
+                <p class="text-slate-400 leading-relaxed text-sm mb-6">
+                  A centralized platform for students and staff to lodge and
+                  track complaints within the department. Supports multiple user
+                  roles, complaint categories, location/serial tracking, image
+                  uploads, and OTP-based password reset.
+                </p>
+
+                <!-- Tech Stack -->
+                <div class="flex flex-wrap gap-2 mb-6">
+                  <span
+                    class="rounded-md bg-slate-800/80 px-2.5 py-1 text-xs font-medium text-slate-300 border border-slate-700/50"
+                    >PHP</span
+                  >
+                  <span
+                    class="rounded-md bg-slate-800/80 px-2.5 py-1 text-xs font-medium text-slate-300 border border-slate-700/50"
+                    >MySQL</span
+                  >
+                  <span
+                    class="rounded-md bg-slate-800/80 px-2.5 py-1 text-xs font-medium text-slate-300 border border-slate-700/50"
+                    >Apache</span
+                  >
+                </div>
+
+                <!-- Actions -->
+                <div
+                  class="flex flex-wrap gap-3 pt-4 border-t border-slate-800/50"
+                >
+                  <a
+                    href="https://github.com/kavindurideesh/ComplaintMS"
+                    target="_blank"
+                    rel="noopener"
+                    class="inline-flex items-center justify-center gap-2 rounded-full border border-slate-700 bg-slate-950 px-4 py-2 text-xs font-medium text-slate-400 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-slate-900 hover:border-transparent"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      class="h-4 w-4"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.833.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.95 0-1.093.39-1.988 1.03-2.688-.103-.253-.447-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.748-1.026 2.748-1.026.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.944.359.31.679.92.679 1.852 0 1.336-.012 2.415-.012 2.741 0 .268.18.58.688.481A10.019 10.019 0 0 0 22 12.017C22 6.484 17.523 2 12 2Z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span>Source</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- To‑Do App -->
+            <div
+              class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 transition-all duration-300 hover:border-violet-500/30 hover:shadow-2xl hover:shadow-violet-500/10"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-b from-transparent to-slate-950/90 z-10 pointer-events-none"
+              ></div>
+
+              <!-- Image -->
+              <div class="relative h-64 overflow-hidden">
+                <div
+                  class="absolute inset-0 bg-violet-500/10 mix-blend-overlay z-10"
+                ></div>
+                <img
+                  src="assets/todo-app.png"
+                  alt="Mobile To‑Do app demo"
+                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+
+              <!-- Content -->
+              <div class="relative z-20 p-6 -mt-12">
+                <div
+                  class="mb-4 inline-flex items-center gap-2 rounded-full border border-violet-500/20 bg-slate-950/80 backdrop-blur-sm px-3 py-1 text-xs font-medium text-violet-300 shadow-sm"
+                >
+                  Mobile Development
+                </div>
+
+                <h3
+                  class="text-2xl font-bold text-white mb-2 group-hover:text-violet-300 transition-colors"
+                >
+                  To‑Do App (Mobile)
+                </h3>
+
+                <p class="text-slate-400 leading-relaxed text-sm mb-6">
+                  A simple, clean task manager app focusing on usability, state
+                  management and responsive layout. Built as part of a mobile
+                  development module.
+                </p>
+
+                <!-- Tech Stack -->
+                <div class="flex flex-wrap gap-2 mb-6">
+                  <span
+                    class="rounded-md bg-slate-800/80 px-2.5 py-1 text-xs font-medium text-slate-300 border border-slate-700/50"
+                    >React Native</span
+                  >
+                  <span
+                    class="rounded-md bg-slate-800/80 px-2.5 py-1 text-xs font-medium text-slate-300 border border-slate-700/50"
+                    >Expo</span
+                  >
+                </div>
+
+                <!-- Actions -->
+                <div
+                  class="flex flex-wrap gap-3 pt-4 border-t border-slate-800/50"
+                >
+                  <a
+                    href="https://www.canva.com/design/DAG6zOGwJbU/KITdt30nHz3UfR0_vGhyhw/edit?utm_content=DAG6zOGwJbU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                    target="_blank"
+                    rel="noopener"
+                    class="inline-flex items-center justify-center gap-2 rounded-full border border-slate-700 bg-slate-800 px-4 py-2 text-xs font-medium text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-red-600 hover:border-transparent hover:shadow-lg hover:shadow-white/20"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      class="h-3.5 w-3.5"
+                    >
+                      <path
+                        d="M8 5.14v13.72c0 .46.5.74.9.5l9.05-6.86a.6.6 0 0 0 0-.98L8.9 4.64a.6.6 0 0 0-.9.5Z"
+                      />
+                    </svg>
+                    <span>Demo Video</span>
+                  </a>
+
+                  <a
+                    href="https://github.com/vinukisam/todo-app-2024"
+                    target="_blank"
+                    rel="noopener"
+                    class="inline-flex items-center justify-center gap-2 rounded-full border border-slate-700 bg-slate-950 px-4 py-2 text-xs font-medium text-slate-400 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-slate-900 hover:border-transparent"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      class="h-4 w-4"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.833.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.95 0-1.093.39-1.988 1.03-2.688-.103-.253-.447-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.748-1.026 2.748-1.026.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.944.359.31.679.92.679 1.852 0 1.336-.012 2.415-.012 2.741 0 .268.18.58.688.481A10.019 10.019 0 0 0 22 12.017C22 6.484 17.523 2 12 2Z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span>Source</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bad Cookie Detector -->
+            <div
+              class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 transition-all duration-300 hover:border-emerald-500/30 hover:shadow-2xl hover:shadow-emerald-500/10"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-b from-transparent to-slate-950/90 z-10 pointer-events-none"
+              ></div>
+
+              <!-- Image -->
+              <div class="relative h-64 overflow-hidden">
+                <div
+                  class="absolute inset-0 bg-emerald-500/10 mix-blend-overlay z-10"
+                ></div>
+                <img
+                  src="assets/bad-cookie.png"
+                  alt="Bad cookie detector simulation"
+                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+
+              <!-- Content -->
+              <div class="relative z-20 p-6 -mt-12">
+                <div
+                  class="mb-4 inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-slate-950/80 backdrop-blur-sm px-3 py-1 text-xs font-medium text-emerald-300 shadow-sm"
+                >
+                  Computer Vision (with Edge/Cloud Computing)
+                </div>
+
+                <h3
+                  class="text-2xl font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors"
+                >
+                  Bad Cookie Detector
+                </h3>
+
+                <p class="text-slate-400 leading-relaxed text-sm mb-6">
+                  This project uses an AI image-classification API to detect defective cookies on a simulated conveyor belt. It focuses on comparing edge and cloud deployments for faster, more efficient cookie quality inspection.
+                </p>
+
+                <!-- Tech Stack -->
+                <div class="flex flex-wrap gap-2 mb-6">
+                  <span
+                    class="rounded-md bg-slate-800/80 px-2.5 py-1 text-xs font-medium text-slate-300 border border-slate-700/50"
+                    >Python(Pygame, sockets)</span
+                  >
+                  <span
+                    class="rounded-md bg-slate-800/80 px-2.5 py-1 text-xs font-medium text-slate-300 border border-slate-700/50"
+                    >Docker</span
+                  >
+                  <span
+                    class="rounded-md bg-slate-800/80 px-2.5 py-1 text-xs font-medium text-slate-300 border border-slate-700/50"
+                    >Cloud/Edge API integration</span
+                  >
+                </div>
+
+                <!-- Actions -->
+                <div
+                  class="flex flex-wrap gap-3 pt-4 border-t border-slate-800/50"
+                >
+                  <a
+                    href="https://1drv.ms/p/s!AvNVCNQpDCZelCbeFSEBwriNZFQz?e=b87rAX"
+                    target="_blank"
+                    rel="noopener"
+                    class="inline-flex items-center justify-center gap-2 rounded-full border border-slate-700 bg-slate-800 px-4 py-2 text-xs font-medium text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-red-600 hover:border-transparent hover:shadow-lg hover:shadow-white/20"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-3.5 w-3.5"
+                    >
+                      <rect
+                        width="18"
+                        height="18"
+                        x="3"
+                        y="3"
+                        rx="2"
+                        ry="2"
+                      />
+                      <line x1="9" x2="15" y1="3" y2="21" />
+                    </svg>
+                    <span>Slides</span>
+                  </a>
+
+                  <a
+                    href="https://github.com/amjadh27/cookieDetector.git"
+                    target="_blank"
+                    rel="noopener"
+                    class="inline-flex items-center justify-center gap-2 rounded-full border border-slate-700 bg-slate-950 px-4 py-2 text-xs font-medium text-slate-400 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-slate-900 hover:border-transparent"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      class="h-4 w-4"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.833.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.95 0-1.093.39-1.988 1.03-2.688-.103-.253-.447-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.748-1.026 2.748-1.026.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.944.359.31.679.92.679 1.852 0 1.336-.012 2.415-.012 2.741 0 .268.18.58.688.481A10.019 10.019 0 0 0 22 12.017C22 6.484 17.523 2 12 2Z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span>Source</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VOLUNTEERING & LEADERSHIP -->
+      <section
+        id="volunteering"
+        class="relative overflow-hidden bg-slate-950 section-spacing"
+      >
+        <!-- Background -->
+        <div
+          class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-sky-500/5 blur-[120px] rounded-full pointer-events-none"
+        ></div>
+
+        <div class="relative mx-auto max-w-7xl px-6 md:px-12">
+          <div class="text-center mb-8 sm:mb-10 lg:mb-12">
+            <h2
+              class="text-3xl font-bold tracking-tight text-white sm:text-4xl"
+            >
+              Leadership &amp; Volunteering
+            </h2>
+            <div class="mt-2 h-1 w-20 bg-sky-500 rounded-full mx-auto"></div>
+            <p
+              class="mt-4 text-slate-400 max-w-2xl mx-auto text-lg"
+            >
+              Growing through community involvement, organising events and
+              representing student communities.
+            </p>
+          </div>
+
+          <!-- Unique 12-column grid for perfect "Leadership" alignment -->
+          <div class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-12">
+            
+            <!-- IEEE SB UOJ (Featured: 8 cols) -->
+            <div
+              class="col-span-1 md:col-span-2 lg:col-span-8 group relative rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition-all duration-300 hover:border-indigo-500/30 hover:shadow-xl hover:shadow-indigo-500/10"
+            >
+              <div
+                class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="w-24 h-24 text-indigo-500"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+
+              <div class="relative z-10 flex flex-col md:flex-row gap-6">
+                <!-- Icon Box -->
+                <div class="flex-shrink-0">
+                  <div
+                    class="flex h-14 w-14 items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-400 ring-1 ring-indigo-500/20 group-hover:bg-indigo-500 group-hover:text-white transition-colors"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-7 h-7"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- Info -->
+                <div class="flex-1">
+                  <div
+                    class="flex flex-wrap items-center justify-between gap-2 mb-2"
+                  >
+                    <h3
+                      class="text-lg font-bold text-white group-hover:text-indigo-300 transition-colors"
+                    >
+                      IEEE Student Branch – University of Jaffna
+                    </h3>
+                    <span
+                      class="inline-flex items-center rounded-full border border-indigo-500/20 bg-indigo-500/10 px-2.5 py-0.5 text-xs font-semibold text-indigo-300"
+                    >
+                      Jan 2023 – Present
+                    </span>
+                  </div>
+                  <p class="text-sm font-medium text-slate-400 mb-6 max-w-2xl">
+                    Treasurer (2024/25) · Executive Committee Member
+                    (2022/23–2024/25) · Awards &amp; Recognition · IEEEXtreme
+                  </p>
+
+                  <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4">
+                    <div
+                      class="rounded-lg bg-slate-950/50 p-3 border border-slate-800 hover:border-indigo-500/20 transition-colors"
+                    >
+                      <h4
+                        class="text-xs font-semibold text-indigo-300 mb-1"
+                      >
+                        Financial Leadership
+                      </h4>
+                      <p
+                        class="text-xs text-slate-400 leading-relaxed"
+                      >
+                        Manage budgeting, reimbursements &amp; financial tracking (annual budget).
+                      </p>
+                    </div>
+                    <div
+                      class="rounded-lg bg-slate-950/50 p-3 border border-slate-800 hover:border-indigo-500/20 transition-colors"
+                    >
+                      <h4
+                        class="text-xs font-semibold text-indigo-300 mb-1"
+                      >
+                        Event Management
+                      </h4>
+                      <p
+                        class="text-xs text-slate-400 leading-relaxed"
+                      >
+                        Core organizer for IEEE Day 2023 &amp; IEEEXtreme 17.0 (100+ participants).
+                      </p>
+                    </div>
+                    <div
+                      class="rounded-lg bg-slate-950/50 p-3 border border-slate-800 hover:border-indigo-500/20 transition-colors"
+                    >
+                      <h4
+                        class="text-xs font-semibold text-indigo-300 mb-1"
+                      >
+                        Strategic Planning
+                      </h4>
+                      <p
+                        class="text-xs text-slate-400 leading-relaxed"
+                      >
+                        Spearheaded award nomination reports, securing recognition for the branch.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- YarlInsight (4 cols) -->
+            <div
+              class="md:col-span-1 lg:col-span-4 group relative rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition-all duration-300 hover:border-sky-500/30 hover:shadow-xl hover:shadow-sky-500/10 flex flex-col justify-between"
+            >
+              <div class="relative z-10">
+                <div class="flex items-center justify-between mb-4">
+                  <div
+                    class="flex h-10 w-10 items-center justify-center rounded-lg bg-sky-500/10 text-sky-400 ring-1 ring-sky-500/20 group-hover:bg-sky-500 group-hover:text-white transition-colors"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z"
+                      />
+                    </svg>
+                  </div>
+                  <span
+                    class="text-[0.65rem] font-medium uppercase tracking-wider text-slate-500"
+                    >Jun – Aug 2024</span
+                  >
+                </div>
+
+                <h3
+                  class="text-sm font-bold text-white group-hover:text-sky-300 transition-colors mb-1"
+                >
+                  YarlInsight Summer School '24
+                </h3>
+                <p class="text-xs font-semibold text-sky-400 mb-3">
+                  Financial Chair
+                </p>
+                <div class="h-px w-full bg-slate-800/50 mb-3"></div>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                  Led financial planning and sponsorship management for a 3-day tech workshop. Ensured optimal resource allocation for 100+ attendees.
+                </p>
+              </div>
+            </div>
+
+            <!-- IEEE YP (3 cols) -->
+            <div
+              class="md:col-span-1 lg:col-span-3 group relative rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition-all duration-300 hover:border-emerald-500/30 hover:shadow-xl hover:shadow-emerald-500/10"
+            >
+              <div class="relative z-10">
+                <div class="flex items-center justify-between mb-4">
+                  <div
+                    class="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-400 ring-1 ring-emerald-500/20 group-hover:bg-emerald-500 group-hover:text-white transition-colors"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582"
+                      />
+                    </svg>
+                  </div>
+                  <span
+                    class="text-[0.65rem] font-medium uppercase tracking-wider text-slate-500"
+                    >Sep 2023 – Sep 2024</span
+                  >
+                </div>
+
+                <h3
+                  class="text-sm font-bold text-white group-hover:text-emerald-300 transition-colors mb-1"
+                >
+                  IEEE Young Professionals
+                </h3>
+                <p class="text-xs font-semibold text-emerald-400 mb-2">
+                  University Rep – StudPro 6.0
+                </p>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                  Liaison between IEEE YP SL and UoJ scholars, promoting career development programs.
+                </p>
+              </div>
+            </div>
+
+            <!-- Batch Rep (3 cols) -->
+            <div
+              class="md:col-span-1 lg:col-span-3 group relative rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition-all duration-300 hover:border-teal-500/30 hover:shadow-xl hover:shadow-teal-500/10"
+            >
+              <div class="relative z-10">
+                <div class="flex items-center justify-between mb-4">
+                  <div
+                    class="flex h-10 w-10 items-center justify-center rounded-lg bg-teal-500/10 text-teal-400 ring-1 ring-teal-500/20 group-hover:bg-teal-500 group-hover:text-white transition-colors"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"
+                      />
+                    </svg>
+                  </div>
+                  <span
+                    class="text-[0.65rem] font-medium uppercase tracking-wider text-slate-500"
+                    >2023 – 2024</span
+                  >
+                </div>
+
+                <h3
+                  class="text-sm font-bold text-white group-hover:text-teal-300 transition-colors mb-1"
+                >
+                  Dept. of CS – UoJ
+                </h3>
+                <p class="text-xs font-semibold text-teal-400 mb-2">
+                  Batch Representative (L2S)
+                </p>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                  Addressing student concerns and coordinating academic schedules with faculty.
+                </p>
+              </div>
+            </div>
+
+            <!-- Leo Club (3 cols) -->
+            <div
+              class="md:col-span-1 lg:col-span-3 group relative rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition-all duration-300 hover:border-orange-500/30 hover:shadow-xl hover:shadow-orange-500/10"
+            >
+              <div class="relative z-10">
+                <div class="flex items-center justify-between mb-4">
+                  <div
+                    class="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/10 text-orange-400 ring-1 ring-orange-500/20 group-hover:bg-orange-500 group-hover:text-white transition-colors"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
+                      />
+                    </svg>
+                  </div>
+                  <span
+                    class="text-[0.65rem] font-medium uppercase tracking-wider text-slate-500"
+                    >Dec 2022 – Nov 2024
+                  </span>
+                </div>
+
+                <h3
+                  class="text-sm font-bold text-white group-hover:text-orange-300 transition-colors mb-1"
+                >
+                  Leo Club – Nallur
+                </h3>
+                <p class="text-xs font-semibold text-orange-400 mb-2">
+                  Assistant Secretary
+                </p>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                  Driving community outreach projects, documentation and social service initiatives.
+                </p>
+              </div>
+            </div>
+
+            <!-- Gavel Club (3 cols) -->
+            <div
+              class="md:col-span-1 lg:col-span-3 group relative rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition-all duration-300 hover:border-fuchsia-500/30 hover:shadow-xl hover:shadow-fuchsia-500/10"
+            >
+              <div class="relative z-10">
+                <div class="flex items-center justify-between mb-4">
+                  <div
+                    class="flex h-10 w-10 items-center justify-center rounded-lg bg-fuchsia-500/10 text-fuchsia-400 ring-1 ring-fuchsia-500/20 group-hover:bg-fuchsia-500 group-hover:text-white transition-colors"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"
+                      />
+                    </svg>
+                  </div>
+                  <span
+                    class="text-[0.65rem] font-medium uppercase tracking-wider text-slate-500"
+                    >Sep 2023 – Jan 2025</span
+                  >
+                </div>
+
+                <h3
+                  class="text-sm font-bold text-white group-hover:text-fuchsia-300 transition-colors mb-1"
+                >
+                  Gavel Club – UoJ
+                </h3>
+                <p class="text-xs font-semibold text-fuchsia-400 mb-2">
+                  Sergeant at Arms
+                </p>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                  Ensured professional meeting protocols and environment management.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section
+        id="contact"
+        class="relative overflow-hidden bg-slate-950 section-spacing"
+      >
+        <!-- Background -->
+        <div
+          class="absolute top-0 right-1/2 translate-x-1/2 w-[1000px] h-[600px] bg-indigo-500/5 blur-[120px] rounded-full pointer-events-none"
+        ></div>
+
+        <div class="relative mx-auto max-w-7xl px-6 md:px-12">
+          <div class="text-center mb-8 sm:mb-10 lg:mb-12">
+            <h2
+              class="text-3xl font-bold tracking-tight text-white sm:text-4xl"
+            >
+              Get in Touch
+            </h2>
+            <div class="mt-2 h-1 w-20 bg-indigo-500 rounded-full mx-auto"></div>
+            <p
+              class="mt-4 text-slate-400 max-w-2xl mx-auto text-lg"
+            >
+              Open to internship opportunities and research collaborations in
+              software engineering, cybersecurity, networking and AI.
+            </p>
+          </div>
+
+          <div class="grid gap-10 lg:grid-cols-2">
+            <!-- Contact Info Cards -->
+            <div class="space-y-6">
+              <!-- Email Card -->
+              <div
+                class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition-all duration-300 hover:border-indigo-500/30 hover:shadow-lg hover:shadow-indigo-500/10"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-r from-indigo-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                ></div>
+                <div class="relative z-10 flex items-center gap-4">
+                  <div
+                    class="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-400 ring-1 ring-indigo-500/20 group-hover:bg-indigo-500 group-hover:text-white transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-indigo-500/40"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p
+                      class="text-sm font-medium text-slate-400 mb-0.5"
+                    >
+                      Email Me
+                    </p>
+                    <a
+                      href="mailto:zh.amjadhussain@gmail.com"
+                      class="text-lg font-semibold text-slate-100 transition-colors group-hover:text-indigo-400"
+                      >zh.amjadhussain@gmail.com</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Phone Card -->
+              <div
+                class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition-all duration-300 hover:border-emerald-500/30 hover:shadow-lg hover:shadow-emerald-500/10"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                ></div>
+                <div class="relative z-10 flex items-center gap-4">
+                  <div
+                    class="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400 ring-1 ring-emerald-500/20 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-emerald-500/40"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p
+                      class="text-sm font-medium text-slate-400 mb-0.5"
+                    >
+                      Call Me
+                    </p>
+                    <span
+                      class="text-lg font-semibold text-slate-100 transition-colors group-hover:text-emerald-400"
+                      >+94 76 260 2727</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Social Grid -->
+              <div class="grid grid-cols-2 gap-4">
+                <!-- LinkedIn -->
+                <a
+                  href="https://linkedin.com/in/amjadhussain2k"
+                  target="_blank"
+                  rel="noopener"
+                  class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 p-4 transition-all duration-300 hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/10"
+                >
+                  <div
+                    class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  ></div>
+                  <div
+                    class="relative z-10 flex flex-col items-center text-center gap-3"
+                  >
+                    <div
+                      class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/10 text-blue-400 ring-1 ring-blue-500/20 group-hover:bg-blue-500 group-hover:text-white transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-blue-500/40"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        class="w-5 h-5"
+                      >
+                        <path
+                          d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="text-sm font-semibold text-slate-300 group-hover:text-blue-300"
+                      >LinkedIn</span
+                    >
+                  </div>
+                </a>
+
+                <!-- GitHub -->
+                <a
+                  href="https://github.com/amjadh27"
+                  target="_blank"
+                  rel="noopener"
+                  class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 p-4 transition-all duration-300 hover:border-slate-500/30 hover:shadow-lg hover:shadow-slate-500/10"
+                >
+                  <div
+                    class="absolute inset-0 bg-gradient-to-br from-slate-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  ></div>
+                  <div
+                    class="relative z-10 flex flex-col items-center text-center gap-3"
+                  >
+                    <div
+                      class="flex h-10 w-10 items-center justify-center rounded-lg bg-slate-700/50 text-slate-300 ring-1 ring-slate-600/50 group-hover:bg-black group-hover:text-white transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-white/20"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        class="w-5 h-5"
+                      >
+                        <path
+                          d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="text-sm font-semibold text-slate-300 group-hover:text-white"
+                      >GitHub</span
+                    >
+                  </div>
+                </a>
+              </div>
+
+              <!-- Location -->
+              <div
+                class="flex items-center justify-center gap-2 rounded-xl bg-slate-900/30 p-3 border border-slate-800 text-slate-400 text-sm"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-4 h-4 text-emerald-400"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                  />
+                </svg>
+                <span>Dehiwala, Colombo, Sri Lanka</span>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div
+              class="relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/80 p-8 shadow-2xl backdrop-blur-xl"
+            >
+              <div
+                class="absolute -top-24 -right-24 w-48 h-48 bg-indigo-500/20 blur-[60px] rounded-full pointer-events-none"
+              ></div>
+
+              <h3 class="text-xl font-bold text-white mb-2">
+                Send a Message
+              </h3>
+              <p class="text-sm text-slate-400 mb-6">
+                Got a project in mind or just want to say hi? I’ll get back to
+                you as soon as possible.
+              </p>
+
+              <form
+                action="mailto:zh.amjadhussain@gmail.com"
+                method="post"
+                enctype="text/plain"
+                class="space-y-5"
+              >
+                <div class="space-y-1.5">
+                  <label
+                    for="name"
+                    class="text-xs font-semibold uppercase tracking-wider text-slate-400"
+                    >Your Name</label
+                  >
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    required
+                    class="w-full rounded-xl border border-slate-700/50 bg-slate-950/50 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-600 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 transition-all shadow-inner"
+                    placeholder="Enter your name"
+                  />
+                </div>
+
+                <div class="space-y-1.5">
+                  <label
+                    for="email"
+                    class="text-xs font-semibold uppercase tracking-wider text-slate-400"
+                    >Your Email</label
+                  >
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    class="w-full rounded-xl border border-slate-700/50 bg-slate-950/50 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-600 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 transition-all shadow-inner"
+                    placeholder="name@example.com"
+                  />
+                </div>
+
+                <div class="space-y-1.5">
+                  <label
+                    for="message"
+                    class="text-xs font-semibold uppercase tracking-wider text-slate-400"
+                    >Your Message</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    required
+                    class="w-full rounded-xl border border-slate-700/50 bg-slate-950/50 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-600 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 transition-all shadow-inner resize-none"
+                    placeholder="How can I help you?"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="group w-full inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-indigo-500 to-violet-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-indigo-500/25 transition-all duration-300 hover:from-emerald-400 hover:to-emerald-500 hover:text-black hover:shadow-emerald-500/50 hover:scale-[1.02] active:scale-[0.98]"
+                >
+                  <span>Send Message</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    class="h-4 w-4 transition-transform group-hover:translate-x-1"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 12L3.269 3.126A59.768 59.768 0 0 1 21.485 12 59.77 59.77 0 0 1 3.27 20.876L5.999 12zm0 0h7.5"
+                    />
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer
+      class="border-t border-slate-800/50 bg-slate-950 py-8 relative overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-indigo-500/5 to-transparent pointer-events-none"
+      ></div>
+      <div
+        class="relative mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-center md:px-12 md:flex-row md:text-left"
+      >
+        <div>
+          <p class="text-sm font-medium text-slate-300">
+            © <span id="year"></span> Amjad Hussain
+          </p>
+          <p class="text-xs text-slate-500 mt-1">
+            Full‑Stack Developer · Cybersecurity Enthusiast
+          </p>
+        </div>
+
+        <div class="flex items-center gap-6">
+          <a
+            href="#hero"
+            class="relative z-50 text-slate-400 hover:text-indigo-400 transition-colors text-xs font-medium"
+            >Home</a
+          >
+          <a
+            href="#projects"
+            class="text-slate-400 hover:text-indigo-400 transition-colors text-xs font-medium"
+            >Projects</a
+          >
+          <a
+            href="#contact"
+            class="text-slate-400 hover:text-indigo-400 transition-colors text-xs font-medium"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Dynamic year
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Mobile nav elements
+      const navToggle = document.getElementById("nav-toggle");
+      const navMenu = document.getElementById("nav-menu");
+      const iconOpen = document.getElementById("icon-open");
+      const iconClose = document.getElementById("icon-close");
+
+      // Toggle Menu Function
+      function toggleMenu() {
+        const isClosed = navMenu.classList.contains("invisible");
+
+        if (isClosed) {
+          // Open menu
+          navMenu.classList.remove("invisible", "opacity-0");
+          navMenu.classList.add("visible", "opacity-100");
+
+          // Lock scroll
+          document.body.classList.add("overflow-hidden");
+
+          // Switch icons
+          navToggle.setAttribute("aria-expanded", "true");
+          iconOpen.classList.add("hidden");
+          iconClose.classList.remove("hidden");
+        } else {
+          closeMenu();
+        }
+      }
+
+      // Close Menu Function (Helper)
+      function closeMenu() {
+       navMenu.classList.remove("visible", "opacity-100");
+        navMenu.classList.add("invisible", "opacity-0");
+
+        // Unlock scroll
+        document.body.classList.remove("overflow-hidden");
+
+        // Switch icons
+        navToggle.setAttribute("aria-expanded", "false");
+        iconOpen.classList.remove("hidden");
+        iconClose.classList.add("hidden");
+      }
+
+      // Event Listeners
+      navToggle?.addEventListener("click", toggleMenu);
+
+      // Reveal on Scroll Observer
+      const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll("section").forEach((section) => {
+        section.classList.add("reveal-section");
+        observer.observe(section);
+      });
+      // Ensure scroll is unlocked if we resize to desktop
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 768) {
+          document.body.classList.remove("overflow-hidden");
+          navToggle?.setAttribute("aria-expanded", "false");
+          iconOpen?.classList.remove("hidden");
+          iconClose?.classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>
