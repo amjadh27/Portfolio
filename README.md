@@ -36,7 +36,7 @@ Since this project uses the Tailwind CSS CDN, there is no need for a complex bui
 
 1.  **Clone the repository:**
     ```bash
-    git clone (https://github.com/amjadh27/Portfolio.git)
+    git clone https://github.com/amjadh27/Portfolio.git
     ```
 2.  **Navigate to the project directory:**
     ```bash
