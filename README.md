@@ -1,5 +1,3 @@
-Here is a comprehensive `README.md` file tailored to the source code you provided, adhering to the GNU General Public License v3.0 (GPLv3).
-
 -----
 
 # Amjad Hussain - Personal Portfolio Website
